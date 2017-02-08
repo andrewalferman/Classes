@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 FEB 2017 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  4 FEB 2017 11:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,12 +663,12 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 96.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 103--112
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--112
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
@@ -676,50 +676,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--112
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 118--123
 
  []
 
+[2]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 127.
+(Font)              scaled to size 6.99199pt on input line 124.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 127.
+(Font)              scaled to size 5.51999pt on input line 124.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 127.
+(Font)              scaled to size 6.99199pt on input line 124.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 127.
-[2] [3]
+(Font)              scaled to size 5.51999pt on input line 124.
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--135
+
+ []
+
+
+Package caption Warning: \label without proper reference on input line 139.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 137.
+
+LaTeX Warning: Reference `plot:exp1' on page 3 undefined on input line 137.
+
+<Lab1FigureCY.png, id=10, 399.4925pt x 287.0725pt>
+File: Lab1FigureCY.png Graphic file (type png)
+ <use Lab1FigureCY.png>
+Package pdftex.def Info: Lab1FigureCY.png used on input line 140.
+(pdftex.def)             Requested size: 239.69734pt x 172.24483pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: \label without proper reference on input line 152.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `plot:exp1A' on page 3 undefined on input line 147.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--148
+
+ []
+
+[3] <Lab1FigureUncalRot.png, id=18, 397.485pt x 287.0725pt>
+File: Lab1FigureUncalRot.png Graphic file (type png)
+
+<use Lab1FigureUncalRot.png>
+Package pdftex.def Info: Lab1FigureUncalRot.png used on input line 150.
+(pdftex.def)             Requested size: 238.49283pt x 172.24483pt.
+
+
+Package caption Warning: \label without proper reference on input line 158.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `plot:exp1B' on page 4 undefined on input line 155.
+
+<Lab1FigureRot.png, id=19, 465.74pt x 287.0725pt>
+File: Lab1FigureRot.png Graphic file (type png)
+ <use Lab1FigureRot.png>
+Package pdftex.def Info: Lab1FigureRot.png used on input line 159.
+(pdftex.def)             Requested size: 279.44615pt x 172.24483pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: \label without proper reference on input line 166.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `plot:exp2' on page 4 undefined on input line 163.
+
+[4 <./Lab1FigureCY.png> <./Lab1FigureUncalRot.png>]
+<Lab1FigureScale.png, id=25, 399.4925pt x 287.0725pt>
+File: Lab1FigureScale.png Graphic file (type png)
+
+<use Lab1FigureScale.png>
+Package pdftex.def Info: Lab1FigureScale.png used on input line 167.
+(pdftex.def)             Requested size: 239.69734pt x 172.24483pt.
+
+
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `plot:exp3' on page 5 undefined on input line 171.
+
+<Lab1FigureGili.png, id=26, 396.48125pt x 287.0725pt>
+File: Lab1FigureGili.png Graphic file (type png)
+ <use Lab1FigureGili.png>
+Package pdftex.def Info: Lab1FigureGili.png used on input line 175.
+(pdftex.def)             Requested size: 237.89058pt x 172.24483pt.
+
+[5 <./Lab1FigureRot.png> <./Lab1FigureScale.png>] [6 <./Lab1FigureGili.png>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 164.
+(Font)              scaled to size 6.25598pt on input line 202.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 164.
- [4
+(Font)              scaled to size 6.25598pt on input line 202.
 
-] [5
+Overfull \hbox (4.86499pt too wide) in paragraph at lines 190--213
+ [] 
+ []
 
-] [6
+[7
 
-] (./ME552_Lab1_Report_AndrewAlferman.aux) ) 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 236--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--252
+
+ []
+
+[8
+
+] (./ME552_Lab1_Report_AndrewAlferman.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7194 strings out of 493014
- 114311 string characters out of 6133351
- 262039 words of memory out of 5000000
- 10578 multiletter control sequences out of 15000+600000
- 95481 words of font info for 110 fonts, out of 8000000 for 9000
+ 7235 strings out of 493014
+ 115084 string characters out of 6133351
+ 263280 words of memory out of 5000000
+ 10617 multiletter control sequences out of 15000+600000
+ 94508 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,14n,51p,8511b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist
-/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/fourier/fourier-mex.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/fourier/fourier-ml.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/fourier/fourier-mlit.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/fourier/fourier-ms.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ado
-be/utopia/putr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/adobe/utop
-ia/putri8a.pfb>
-Output written on ME552_Lab1_Report_AndrewAlferman.pdf (6 pages, 50330 bytes).
+ 47i,15n,51p,8511b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on ME552_Lab1_Report_AndrewAlferman.pdf (8 pages, 140138 bytes).
+
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

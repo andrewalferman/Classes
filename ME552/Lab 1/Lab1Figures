@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb  2 21:45:38 2017
+
+@author: andrewalferman
+"""
+
+import numpy as np
+import pylab as pyl
+
+# List of frotameter low rates
+rotflowrate = [1.2, 1.9, 2.3, 3.5, 4.1, 4.8, 5.6, 6.4, 7.5]
+rotcalflow = [1.36, 2.12, 2.58, 4.08, 4.92, 5.79, 7.27, 8.95, 11.27]
+rotcaltol = [0.24, 0.24, 0.24, 0.25, 0.25, 0.26, 0.28, 0.30, 0.32]
+oldrottol = np.ones(9) * 0.2125
+
+# Dial inputs
+dialcfm = [1.364, 2.119, 2.578, 4.090, 4.913, 5.783, 7.288, 8.960, 11.278]
+dialtol = np.ones(9) * 0.01
+
+# Input all of the data obtained from the first experiment
+nominalCY = [7, 10, 7, 6, 5.7, 5.6, 5.42, 5.28, 5.64]
+toleranceCY = [20, 25, 7, 1.5, 0.9, 0.6, 0.35, 0.22, 0.14]
+
+# Input all of the data obtained from the second experiment
+iscorate = [5, 9, 12, 16, 20, 25]
+iscotol = []
+for i in iscorate:
+    iscotol.append(i * 0.01)
+scalerate = [5, 8.93, 11.8, 15.89, 19.93, 24.93]
+scaletol = np.ones(6) * 0.067
+
+# Input all the data obtained from the third experiment
+MKSinput = [2, 2.5, 3, 3.5, 4, 4.5]
+Gilibrator = [2.2065, 2.7623, 3.3375, 3.8636, 4.4245, 4.988]
+MKStol = []
+Giltol = []
+for i in MKSinput:
+    MKStol.append(0.01 * i)
+for i in Gilibrator:
+    Giltol.append(0.01 * i)
+
+
+pyl.figure(1, dpi=900)
+pyl.title('Orifice CY vs. Flow Rate', fontsize=16)
+pyl.xlabel('Observed Flow Rate (cubic feet per minute)', fontsize=12)
+pyl.ylabel('CY Value', fontsize=12)
+pyl.plot(rotcalflow, nominalCY)
+pyl.errorbar(rotcalflow, nominalCY, yerr=toleranceCY, linestyle="None")
+pyl.grid(b=True, which='both')
+
+pyl.figure(2, dpi=900)
+pyl.title('Dial Measurement vs. Rotameter Flow Rate (Calibrated)', fontsize=16)
+pyl.ylabel('Rotameter Flow Rate (Calibrated), scfm', fontsize=12)
+pyl.xlabel('Dry Test Meter Dial Measurement, scfm', fontsize=12)
+pyl.plot(dialcfm, rotcalflow)
+pyl.errorbar(dialcfm, rotcalflow, yerr=rotcaltol, xerr=dialtol,
+             linestyle="None")
+pyl.grid(b=True, which='both')
+
+pyl.figure(3, dpi=900)
+pyl.title('Dial Measurement vs. Uncalibrated Rotameter', fontsize=16)
+pyl.ylabel('Rotameter Flow Rate (Uncalibrated), scfm', fontsize=12)
+pyl.xlabel('Dry Test Meter Dial Measurement,scfm', fontsize=12)
+pyl.plot(dialcfm, rotflowrate)
+pyl.errorbar(dialcfm, rotflowrate, yerr=oldrottol, xerr=dialtol,
+             linestyle="None")
+pyl.grid(b=True, which='both')
+
+pyl.figure(4, dpi=900)
+pyl.title('Isco-Pump Flow Rate vs. Measured Flow Rate', fontsize=16)
+pyl.ylabel('Isco-Pump Flow Rate (mL per minute)', fontsize=12)
+pyl.xlabel('Measured Flow Rate (mL per minute)', fontsize=12)
+pyl.plot(scalerate, iscorate)
+pyl.errorbar(scalerate, iscorate, yerr=iscotol, xerr=scaletol,
+             linestyle="None")
+pyl.grid(b=True, which='both')
+
+pyl.figure(5, dpi=900)
+pyl.title('MKS Flow Rate vs. Gilibrator Flow Rate', fontsize=16)
+pyl.ylabel('MKS Flow Rate (cc per minute)', fontsize=12)
+pyl.xlabel('Gilibrator Flow Rate (cc per minute)', fontsize=12)
+pyl.plot(Gilibrator, MKSinput)
+pyl.errorbar(Gilibrator, MKSinput, yerr=MKStol, xerr=Giltol,
+             linestyle="None")
+pyl.grid(b=True, which='both')
+
+pyl.show()
