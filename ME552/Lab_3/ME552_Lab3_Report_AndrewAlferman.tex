@@ -17,23 +17,36 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
+\iffalse
+\documentclass[12pt]{ussci} % A4 paper and 11pt font size
 
-\documentclass[paper=letter, fontsize=10pt]{scrartcl} % A4 paper and 11pt font size
-
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-\usepackage[english]{babel} % English language/hyphenation
-\usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage{graphicx}
 \usepackage{caption}
-\usepackage[titletoc,title]{appendix}
-\usepackage{titlesec}
-\usepackage{footnote}
-\usepackage{multirow}
-\usepackage{sectsty} % Allows customizing section commands
-\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{subcaption}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[version=4]{mhchem}
 
-\makesavenoteenv{tabular}
+%better printing of numbers
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{textcomp}
+\usepackage{changepage}
+\usepackage[titletoc,title]{appendix}
+
+\usepackage{siunitx}
+\sisetup{group-separator={,},
+     detect-all,
+     binary-units,
+     list-units = single,
+     range-units = single,
+     tophrase = --,
+     per-mode = symbol-or-fraction,
+     separate-uncertainty = true,
+     list-final-separator = {, and }
+%    scientific-notation = fixed
+}
+\DeclareSIUnit\atm{atm}
 
 \usepackage{fancyhdr} % Custom headers and footers
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
@@ -50,6 +63,40 @@
 %\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
 
 % \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+
+%\bibliography{mendeley.bib}
+\fi
+
+\documentclass[paper=letter, fontsize=10pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[titletoc,title]{appendix}
+%\usepackage{titlesec}
+\usepackage{footnote}
+\usepackage{changepage}
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\makesavenoteenv{tabular}
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -72,26 +119,16 @@
 \begin{document}
 
 \iffalse
-%THINGS HERE ARE THE OBJECTIVES TO HIT ON FROM THE LAB 1 FILE
+%THINGS HERE ARE THE OBJECTIVES TO HIT ON FROM THE LAB 3 FILE
 To include in report:
 
--Introduction
-
--Methodology
-
--Assumptions
-
 -Respond to questions in the handout
-
--Provide a table with the apparent flame areea
 
 -Conclude by describing what we learned
 
 -Include in appendix documentation about data reduction code and anything else needed to support the discussion
 
 Specifically include:
-Table with the apparent flame areas for the different operating conditions.  Provide a detailed explanation of the physical processes causing the observed changes
-
 Process a series of 5 consecutive time-resolved images of the flame for each of the operating conditions and include representative images in the report.  Describe any observed changes for the different conditions and  explain any significance
 
 \fi
@@ -100,156 +137,491 @@ Process a series of 5 consecutive time-resolved images of the flame for each of 
 
 \section{Introduction}
 \label{intro}
-%Three separate volumetric flow measurement experiments were conducted using a variety of common sensors and flow control equipment.  In the first experiment, air was directed through an orifice plate, a rotameter, and a dry test meter installed in series.  The orifice plate and rotameter were both calibrated using pressure data and measurements taken from the dry test meter.  The volumetric flow rate of water from an Isco-pump was calibrated in the second experiment using a calibrated scale and a stopwatch.  The volumetric flow rate of air through a MKS controller was measured in the third experiment using a bubble calibrator device.  The data obtained from the experiments was analyzed to determine the impact of compressibility effects and an uncertainty analysis was performed.  The objectives of these experiments were to familiarize the student with calibrating and using volumetric flow rate measurement equipment and to obtain flow rate data that will be used in a later experiment using a controlled flame.
-A controlled flame was observed
-Using the same test apparatus as a previous experiment, 
-The objective of this experiment was to familiarize the student with (NAME OF CATEGORY OF EQUIPMENT) and to introduce the student to some of the basic principles regarding combustion physics.
+A controlled turbulent flame on a burner apparatus was investigated using an intensified charged coupled device (ICCD) camera to study its flow characteristics.  The burner apparatus, which previously had been investigated as part of a flow calibration experiment, produces both a pilot flame and a larger turbulent flame in a variety of Reynolds number and turbulence intensity conditions.  The fuel used in the experiment was methane.  For safety reasons, data for only the smaller pilot flame was obtained in this experiment.  Data from the larger turbulent flame was collected at a separate time, which made it possible for the turbulent flame to be studied by computing the differences between images of the two flames.  Once images of this difference had been obtained, the apparent cross sectional area of the flame was measured.  The objective of this experiment was to familiarize the student with optical measurement devices and techniques, particularly in regard to combustion, and to introduce the student to some of the basic principles regarding combustion physics.
 
 
 \section{Methodology}
 \subsection{Experiment Description}
-%In the first experiment, filtered shop air was directed through an orifice, a rotameter, and a dry test meter that were installed in series.  The flow rate was throttled using a valve in the rotameter to a predetermined value.  A data acquisition system was started and the pressure drop across the orifice was measured using pressure transducers located immediately upstream and downstream of the orifice.  Additionally, the temperature of the air was measured.  A stopwatch was started and the dry test meter dial was photographed.  After approximately four minutes, the dry test meter dial was photographed again.  The stopwatch was in the frame of each photograph, allowing the time in between photographs to be estimated to the nearest hundredth of a second.  By dividing the number of revolutions of the dry test meter dial by the time between the photograph, a flow rate was obtained.  The pressure measurements recorded by the data acquisition system and the information obtained from the dry test meter with the stopwatch were used to determine the orifice discharge coefficient and the rotameter calibration constant using equations included in appendix \ref{app:Method}.
+The turbulent flame was measured in four different configurations by computing the difference in light intensity between the pilot flame and the turbulent flame in each configuration.  Once the difference between the turbulent flames and the pilot flames had been computed, a calibration image was used to calculate the apparent cross sectional area of the flame.  Before the experiment began, the ICCD camera was set up in a fixture at an angle to view the entirety of the flame and the burner apparatus was calibrated in accordance with the procedures detailed in the Laboratory 1 report.  An detailed overview of the calibration of the equipment used in the burner apparatus can also be found in the Laboratory 1 report.  For sake of completeness, the equipment used in Laboratory 1 has been included in Appendix \ref{app:Equip}.  At the onset of the experiment, the ICCD camera was first turned on to allow the equipment to be automatically cooled to its operating temperature, which is cooler than room temperature.  After the camera had fully cooled to its operational temperature, a calibration image was taken.
+% ADD IN THE PROCEDURE FOR LAB 1 AS A REFERENCE
+
+The calibration image was taken by placing a ruler directly on top of the burner nozzle and recording one image with the ICCD camera.  The ruler was illuminated with an ultraviolet light source because an ultraviolet lens was affixed to the ICCD camera and the ambient lighting was insufficient to resolve an image in that spectrum.  Once it had been verified that a satisfactory calibration image had been obtained, the ruler was removed and the burner apparatus was started.  After verifying that all equipment was operating normally, the pilot flame was ignited.
 
 
-%The volumetric flow rate of water through an Isco-pump was measured in the second experiment using a calibrated scale and a stopwatch.  An empty container was placed on the scale and the pump outlet was positioned to discharge into the container.  After zeroing the scale with the container on it, the pump was started at the same time that a stopwatch was started.  After 90 seconds, the pump was stopped and the weight of the container with water was recorded.  The weight of the water divided by the stopwatch time provided a mass flow rate for the water, which could later be converted to a volumetric flow rate given the density of water.  The flow rate obtained from the Isco-pump was compared against the measured flow rate.
+After igniting the pilot flame, the test apparatus was allowed to stabilize.  The ICCD camera was then started, taking six pictures every second for one minute, for a total of 360 images that were each saved in one file on the computer.  The images captured the chemiluminescence of the OH* radicals.  After verifying that the file had saved properly, the test apparatus was shut down and the flame was allowed to extinguish.  Finally, the experiment was repeated twice more for a total of 3 separate collections of data to ensure repeatability.
 
 
-%Air was directed through a small MKS thermal mass flow controller and a bubble calibrator device in the third experiment.  After starting the data acquisition system, the bubble calibrator was used to measure the flow rate.  The flow rate obtained from the MKS controller output was compared against the flow rate obtained from the bubble calibrator device.
+Though it was not witnessed by the students, the experiment was run again using the same procedures as before, however the turbulent flame was started instead of shutting down the experiment.  The turbulent flame was run using two different Reynolds numbers and two different turbulence intensities for a total of four different conditions.  The Reynolds numbers were controlled by increasing the fuel and air flow rate through the burner.  The turbulence intensity was controlled by using a turbulence generator as described by Fillo in \cite{Fillo2015}.  The turbulence generator operated by opening or closing the turbulence generator and thus changing the blockage ratio.
+
 
 \subsection{Equipment Used}
 A list of all of the equipment used can be found in Appendix \ref{app:Equip}.
 
+
 \subsection{Data Analysis}
-%The methodology and equations used to determine the discharge coefficients, calibration constants, and mass and volumetric flow rates is described in appendix \ref{app:Method}.
+After completing all measurements of the flame, the test apparatus was shut down and the data was processed using the MATLAB code included in appendix \ref{app:Code}.  This code processed the images and produced a series of five time-resolved images of the flame for each of the operating conditions.  The code then read the averaged images of the flame, counting the number of pixels which exhibited a light magnitude greater than a given threshold.  Using the calibration image of the ruler, the program calculated the approximate dimensions of every pixel, which allowed the apparent flame area to be calculated as follows:
+\begin{equation}
+A = P_{flame}l_{calibration}^2
+\end{equation}
+in which $A$ is the apparent flame cross sectional area, $P_{flame}$ is the number of pixels observed to have a light magnitude greater than the threshold, and $l_{calibration}$ is the calibration length, which was in turn determined using the equation
+\begin{equation}
+l_{calibration} = \frac{l_{ruler}}{P_{ruler}}
+\end{equation}
+in which $l_{ruler}$ is a length measured by the ruler in the calibration image, and $P_{ruler}$ is the number of pixels between the two points measured on the ruler.
+
 
 \section{Assumptions}
-%To make calibration of equipment possible, at least one measurement device in each experiment was assumed to be calibrated prior to collecting data.  These measurement devices were the pressure transducers and the dry test meter in the first experiment, the scale in the second experiment, and the bubble calibrator in the third experiment. Information regarding the tolerance of each measurement device can be found in appendix \ref{app:Equip}
+The apparent cross sectional area was assumed to be an accurate indication of the flow characteristics of the flame.  This assumption is not technically correct, however it is considered to be sufficient for the purposes of this experiment.  Calculation of values that may be used as accurate metrics of flame characteristics require sophisticated techniques that are beyond the scope of this course.  See \cite{Fillo2017} for additional information.
 
 
-%The assumed condition in which compressibility effects are significant is as follows:
-
-%\begin{equation}
-%\frac{P_1 - P_2}{P_1} \geq 0.1
-%\end{equation}
-
-%in which \(P_1\) is the upstream pressure and \(P_2\) is the downstream pressure, as measured by the pressure transducers.
+The apparent cross sectional area of the flame has no exact definition, and therefore assumptions had to be made regarding its nature.  As instructed in class, it was assumed to be defined as the region in which the light intensity exceeds a defined albeit arbitrary magnitude.  This definition lacks the precision of many of the more rigorous terms used in \cite{Fillo2015} for example, however it was determined to be sufficient for the purposes of this exercise.  In the case of this lab report, the magnitude used to define the apparent cross sectional area was 24.  The author is unaware of any physical meaning behind this number, however use of this number yielded a well defined region in the figures of the average plots constructed using the data from the experiment and MATLAB.
 
 
-%The density of water was assumed to be 1000.0 \(\text{kg}/\text{m}^3\) and the \(c_p\) of water was assumed to be 4186 \(\text{J} / \text{kg} \cdot \text{K}\).  If needed, the density and \(c_p\) of air were varied in calculations based on experimental conditions, however an ideal gas constant of 287.05 \(\text{J} /\text{kg} \cdot \text{K}\) was used.
-
-
-%The compressibility factor Y of equation \ref{eq:1} of appendix \ref{app:Method} is assumed to be equal to one for the purpose of comparing the observed discharge coefficient to that reported by the manufacturer.  This assumption is a source of inaccuracy, however information regarding a more accurate compressibility factor was not readily available.
+In the interests of reducing the time required to complete this laboratory report, an uncertainty analysis was not conducted as part of the current experiment, however a detailed uncertainty analysis has previously been completed by Fillo \cite{Fillo2017}.
 
 \section{Results}
-%A plot of the discharge coefficient times the compressibility factor of the orifice can be found in figure \ref{plot:exp1}.  The large degree of uncertainty attributed to the lower flow rates of the graph is due to the relatively large tolerance of the pressure transducers used in the experiment.  To demonstrate the impact of the 0.25 psi pressure transducer tolerance, the differential pressure across the orifice was less than the pressure transducer tolerance with an observed flow rate of 1.2 scfm, and the pressure transducers in fact measured a greater pressure downstream of the orifice than the pressure upstream of the orifice.  The uncertainty improved greatly at higher flow rates as the differential pressure across the orifice increased to values greater than the tolerance of the pressure transducers.
+Time-resolved images of the flame for each of the operating conditions have been included in appendix \ref{app:Flames}.  The first image of each figure is an averaged image of all images taken under the stated operating condition.  Because it is averaged over many different images, it is smoother than any single image.  All data regarding the flame size was measured using this averaged image.  The subsequent images are the first and last images taken for the stated test condition.  These images are subject to a large degree of variation due to the turbulent nature of the flame.
 
+The apparent flame cross sectional areas for each of the operating conditions can be found in table \ref{tab:flameareas} below:
 
-%The discharge coefficient of the orifice was found to have a value of approximately 5.5 at most flow rates.  This value is greater than the value reported by the manufacturer, which was calculated to be approximately 0.80 using the equation \(C_v = 38 A C_d\), where \(C_v\) was the value of 0.37 reported by the manufacturer, and A is the area of the opening of the orifice.  It cannot be determined if the discharge coefficient is constant for compressible and incompressible flows because no information regarding the compressibility factor Y is available.
+\begin{table}[ht]
+\begin{adjustwidth}{-1in}{-1in}
+\begin{center}
+\begin{tabular}{| c | c | c | c|}
+ \hline
+ Re = 5,000 & Re = 5,000 & Re = 10,000 & Re = 10,000 \\
+ Turbulence Intensity: & Turbulence Intensity: & Turbulence Intensity: & Turbulence Intensity: \\
+ High & Low & High & Low\\
+\hline
+ 3.29 $\textnormal{cm}^2$ & 3.54 $\textnormal{cm}^2$& 6.81 $\textnormal{cm}^2$ & 7.22 $\textnormal{cm}^2$\\
+ \hline
+ \end{tabular}
+ \caption{Apparent Flame Cross Sectional Area}\label{tab:flameareas}
+ \end{center}
+ \end{adjustwidth}
+\end{table}
 
-
-%Compressibility effects were a significant concern for the rotameter, as could be seen in figure \ref{plot:exp1A}.  The plot shows that as the flow rate increased, the rotameter increasingly underestimated the flow rate.
-
-
-%After adding a correction factor to the rotameter flow rate (and thus calibrating the rotameter), a much better correlation could be derived.  Figure \ref{plot:exp1B} shows the calibrated rotameter values.  Note that there are error bars in both directions, however the error from the dry test meter is too small to be seen in this graph (tolerance of 0.01 scfm).
-
-
-%Figure \ref{plot:exp2} is a graph of the flow rate value reported by the Isco-pump versus the measured flow rate.  As seen in the graph, the values match very closely.  There may be a need in some experiments to obtain a more precise value for the flow rate of a fluid, however the value reported by the Isco-pump is generally very good and would not require further calibration.  The reported values fell within the uncertainty bounds.
-
-
-%The plot shown in figure \ref{plot:exp3} below shows that the calibrated and MKS reported values are linearly related.  As the flow rate increases, the measured flow rate using the Gilibrator increases at a slightly higher rate, forming a linear relationship.
+As can be seen, the apparent cross sectional area increased greatly by increasing the Reynolds number, and increased slightly by using a low turbulence intensity instead of a high turbulence intensity.  The flame grew when the Reynolds number increased due to the larger mass and volumetric flow rates.  The increased flow rate meant that the burning fuel was carried further as it combusted, effectively stretching out the flame.  At the same time, the higher Reynolds number meant that the flame had greater mixing and interaction with oxygen from the surrounding environment, which facilitated combustion.  Counterintuitively, the increased turbulence intensity caused the flame to occupy less volume.  The reasons for the decrease in volume are complicated, however one potential cause is that the increase in turbulence intensity is associated with a wrinkling of the flame front.  This wrinkling means that the flame would have a greater surface area for the same volume.  The surface area of the flame is proportional to the amount of oxygen that will come into contact with unburnt fuel, therefore the increased surface area causes the turbulent flame speed will increase, which in turn causes the fuel to burn faster.  Because the amount of fuel remains constant in both high turbulence intensity and low turbulence intensity conditions, the faster burning fuel results in a flame with a smaller volume.
 
 
 \section{Conclusion}
-%It was found through several experiments that the instruments used to measure flow rate need to be carefully selected to obtain accurate results.  For example, orifice flow meters using pressure transducers may give inaccurate results at low volumetric flow rates, while measurements from rotameters in high volumetric flow conditions need to be carefully examined to determine if the effects of compressible flow have been taken into account.  Every instrument used in this lab has advantages and disadvantages that need to be carefully considered.
+Optical measurements provided an effective means of measuring the size of a flame.  This size measurement can be used to gain insight into the fundamental physics behind combustion mechanisms.  In this experiment it was verified that the size of the flame increased with increasing Reynolds number, and slightly decreased with increasing turbulence intensity.  Although the increase in size due to an increase in Reynolds number was an intuitive result, I learned that an increase in turbulence intensity and the associated increase in turbulent flame speed can actually result in a smaller flame instead of a larger one.  This is an important observation because it provides great insight into the fundamental physics of combustion.
+
+
+\bibliography{mendeley}
+\bibliographystyle{unsrt}
+
 
 \clearpage
 \begin{appendices}
-\setcounter{equation}{0}
-% "INCLUDE IN THE APPENDIX DOCUMENTATION ABOUT HOW THE DESIGN STAGE UNCERTAINTY WAS DETERMINED, YOUR UNCERTAINTY TREES, AND ANYTHING THAT IS NEEDED TO SUPPORT YOUR DISCUSSION."
-\section{Equipment Tolerances}\label{app:Equip}
+%\setcounter{equation}{0}
+%\setcounter{figure}{0}
+%\setcounter{table}{0}
+
+\section{Flame Images}\label{app:Flames}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\textwidth]{Re5kHigh.pdf}
+\caption{Flame with a Reynolds number of 5,000 and high turbulence intensity.  The combined time-averaged flame is shown on the left, and the flame area was found to be approximately 3.29 $\textnormal{cm}^2$}
+\label{fig:5high}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\textwidth]{Re5kLow.pdf}
+\caption{Flame with a Reynolds number of 5,000 and low turbulence intensity.  The combined time-averaged flame is shown on the left, and the flame area was found to be approximately 3.54 $\textnormal{cm}^2$}
+\label{fig:5low}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\textwidth]{Re10kHigh.pdf}
+\caption{Flame with a Reynolds number of 10,000 and high turbulence intensity.  The combined time-averaged flame is shown on the left, and the flame area was found to be approximately 6.81 $\textnormal{cm}^2$}
+\label{fig:10high}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\textwidth]{Re10kLow.pdf}
+\caption{Flame with a Reynolds number of 10,000 and low turbulence intensity.  The combined time-averaged flame is shown on the left, and the flame area was found to be approximately 7.22 $\textnormal{cm}^2$}
+\label{fig:10low}
+\end{figure}
+
+\clearpage
+
+
+\section{Equipment and Tolerances}\label{app:Equip}
+
+The same equipment used in previous flow calibration experiment was used in the burner apparatus.  Not all flow calibration equipment was used in the current experiment (i.e. the dry test meter and scale were not directly used for measurements of either the pilot or the turbulent flame), however for sake of completeness the equipment from the flow control experiment is included below:
+
+\begin{table}[h]
+	\begin{adjustwidth}{-1in}{-1in}
+	\begin{center}
+	\begin{tabular}{ | c  c  c |}
+	 \hline
+	 Instrument & Model & Tolerance \\
+	 \hline\hline
+	 Orifice & O'Keefe Type H & See Table \ref{tab:orif} \\
+	 \hline
+	 Rotameter & Omega FL4611-V & +/- 2.5\% of Full Scale (0.2125 scfm)\\
+	 \hline
+	 Pressure Transducer & Omega PX309 & +/- 0.25\% Full Scale (.25 psi) \\
+	 \hline
+	 Thermocouple & Type K & +/- \(2.2^\circ\)C \\
+	 \hline
+	 Dry Test Meter & Singer DTM-200\footnote{The American Meter division of Singer was acquired through a series of transactions by Elster American Meter, therefore 		specifications on the Elster American Meter DTM-200 are assumed to be identical to the Singer DTM-200.} & +/- 0.01 standard cubic foot \\
+	 \hline
+	 Pump & Isco-pump Series D & +/- 0.1\% \\
+	 \hline
+	 Scale & AND FX-6000 & +/- 0.1 gram \\
+	 \hline
+	 Bubble Calibrator & Gilian Gilibrator D800268 & +/- 1\% of reading accuracy \\
+	 \hline
+	 Thermal Flow Controller & MKS GM50A & +/- 1\% of set point \\
+	 \hline
+	\end{tabular}
+	\caption{Equipment Used}\label{tab:tol}
+	\end{center}
+	\end{adjustwidth}
+\end{table}
+
+The orifice used in Laboratory 1 was placed in service in this experiment.  Its critical dimensions are as follows:
 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{ | c  c  c |}
  \hline
- Instrument & Model & Tolerance \\
- \hline\hline
- Orifice & O'Keefe Type H & See Table \ref{tab:orif} \\
+ Measurement & Nominal Value & Tolerance \\
  \hline
- Rotameter & Omega FL4611-V & +/- 2.5\% of Full Scale (0.2125 scfm)\\
+ Orifice Diameter & 0.1248 inch & +/- 0.0004472 inch \\
  \hline
- Pressure Transducer & Omega PX309 & +/- 0.25\% Full Scale (.25 psi) \\
- \hline
- Thermocouple & Type K & +/- \(2.2^\circ\)C \\
- \hline
- Dry Test Meter & Singer DTM-200\footnote{The American Meter division of Singer was acquired through a series of transactions by Elster American Meter, therefore specifications on the Elster American Meter DTM-200 are assumed to be identical to the Singer DTM-200.} & +/- 0.01 standard cubic foot \\
- \hline
- Pump & Isco-pump Series D & +/- 0.1\% \\
- \hline
- Scale & AND FX-6000 & +/- 0.1 gram \\
- \hline
- Bubble Calibrator & Gilian Gilibrator D800268 & +/- 1\% of reading accuracy \\
- \hline
- Thermal Flow Controller & MKS GM50A & +/- 1\% of set point \\
+ Upstream Diameter & 0.3105 inch & +/- 0.0009617 inch \\
  \hline
 \end{tabular}
 \end{center}
-\caption{Equipment Used}\label{tab:tol}
+\caption{Orifice Dimensions}\label{tab:orif}
 \end{table}
+
+In addition to the equipment used in Laboratory 1, an ICCD camera was used:
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{ | c | c | c | c|}
+\begin{tabular}{ | c  c  c |}
  \hline
- Re = 5,000 & Re = 5,000 & Re = 10,000 & Re = 10,000 \\
- High Turbulence Intensity & Low Turbulence Intensity & High Turbulence Intensity & Low Turbulence Intensity \\
-\hline
- 3.29 & 3.54 & 6.81 & 7.22\\
+ Manufacturer & Type & Model No. \\
+ \hline
+ Andor Technology Ltd. & iStar ICCD & DH334T-18U-E3 \\
  \hline
 \end{tabular}
 \end{center}
-\caption{Apparent Flame Area ($\textnormal{cm}^2$)}\label{tab:flameareas}
+\caption{Camera Information}\label{tab:camera}
 \end{table}
+
+
+
 
 \clearpage
 
-\iffalse
-\section{Uncertainty Analysis}\label{app:Unc}
-\subsection{Methodology}\label{app:Method}
-% An uncertainty analysis was conducted using the Kline McClintock method.  The uncertainty values were computed numerically in Python using the attached source code, however a depiction of how the Kline McClintock method worked in each phase of this lab is included in appendix \ref{app:Tree}.  Partial derivatives of each equation were taken until a tolerance from the manufacturer could be used.  In the case of the orifice, the openings were measured using calipers to obtain a more exact value.
-\newline
-\newline
-The equation governing the subsonic volumetric flow rate through an orifice is as follows:
 
-\begin{equation}\label{eq:1}
-Q = C E A Y \sqrt{\frac{2 \Delta P}{\rho_1}}
-\end{equation}
+\section{MATLAB Code}\label{app:Code}
 
-in which Q is the volumetric flow rate, C is the orifice discharge coefficient, A is the area of the orifice opening, Y is a compressibility constant, \(\Delta P\) is the pressure difference across the orifice, \(\rho_1\) is the density of the fluid upstream of the orifice (air in this case).  E is defined as follows:
-\begin{equation}\label{eq:2}
-E =  \frac{1}{\sqrt{1 - (\frac{A_0}{A_1})^2}}
-\end{equation}
+\begingroup
+\fontsize{9pt}{12pt}\selectfont
+\begin{verbatim}
+clear
+clc
+close all
+%% Add path to functions for calculating laminar and turbulent flame speeds.
+% NOTE: if you bwfilter.m is not in the same directory that you run this in
+% you will need to add a path for it.
+Datapath = '/scratch';                           %Adds Data path as callable string
+bg_path = {'RE_5000_Juan.tiff','RE_10000_Juan.tiff'};                         
+%Background File Path
+Cal_path = 'Spacial_Calibration_Group_Juan.tiff';                       
+%Calibration File Path
 
-in which \(A_0\) and \(A_1\) are the area of the orifice opening and the area of the upstream piping, respectively.  The orifice in the first experiment is calibrated by solving for C in equation \ref{eq:1} of this appendix.  
-\newline
+numsamples = 1;                                                                 
+%Number of sample's
+numframes = 360*numsamples;                                                     
+%Set number of frames from camera settings
+home = pwd;                                                                    
+%Sets variable "home" to current directory Callable
 
-%If it is instead found that choked flow conditions exist (i.e. the flow is sonic), the mass flow rate through the orifice is calculated using the following equation:
-%
-%\begin{equation}\label{eq:3}
-%\dot{m}_{choked} = C \frac{P_0 A_1}{\sqrt{R T_0}}\sqrt{\frac{2k}{k+1}\Bigg(\frac{2}{k+1}\Bigg)^\frac{2}{k+1}}
-%\end{equation}
-%
-%in which \(\dot{m}_{choked}\) is the mass flow rate of the fluid, \textit{k} is the ratio of specific heats upstream and downstream of the orifice. % ADD THE OTHER VARIABLES AS NEED BE
+fg_path = {'A2_5k_HTI_01.tiff','A2_5k_HTI_02.tiff','A2_5k_HTI_03.tiff',...
+    'A2_5k_LTI_01.tiff','A2_5k_LTI_02.tiff','A2_5k_LTI_03.tiff',...
+    'A2_10k_HTI_01.tiff','A2_10k_HTI_02.tiff','A2_10k_HTI_03.tiff',...
+    'A2_10k_LTI_01.tiff','A2_10k_LTI_02.tiff','A2_10k_LTI_03.tiff'};          
+    %Forground File Path - This is your image of interest
+%fg_path = 'C:\Users\cowand\ME 552 Data\A2_10k_LTI_03.tiff';
+%fg_path = 'C:\Users\cowand\ME 552 Data\A2_10k_HTI_02.tiff';
 
-The equation governing the relationship between the actual flow rate through a rotameter and the observed flow rate through a rotameter is as follows:
-\begin{equation}\label{eq:4}
-Q_{actual} = C(P_{downstream}) Q_{observed}
-\end{equation}
+%% Input Parameters
+m_dot_total =0.001215;               %Total mass flow (kg/s) of reactants for Re=5,000
+%m_dot_total=.00243;                 %Total mass flow (kg/s) of reactants for Re=10,000
+rho_u       = 0.7871;                     %Unburned Density (kg/m^3) at 200 C
+D           = 12/10;                       %Burner Diameter (cm)
 
-in which \(Q_{actual}\) is the actual volumetric flow rate, \(Q_{observed}\) is the observed volumetric flow rate, and C is a calibration constant that is a function of the downstream pressure, \(P_{downstream}\).
+%%  Spacial Calibration
 
-\subsection{Tree Diagram}\label{app:Tree}
-A tree diagram for the orifice calibration has been attached.  Tree diagrams were not constructed for the other steps of this lab due to the simplicity of all of the subsequent calculations (no uncertainty values were affected by more than one or two variables, and partial derivatives were readily obtained).
-\fi
+%This will be used for image croping and spatial calibration
+info_cal= imfinfo(Cal_path);
+
+im_cal=imread(Cal_path,1,'Info',info_cal,'PixelRegion',{[775,921],[300,900]});
+figure(15)
+imshow(im_cal,[50,230]); axis image %This will show the image to calibrate to
+title('Select locations 70cm and 76cm') %Please select locations 70cm and 76cm
+points=ginput(2);
+close
+point_dist=pdist(points,'euclidean');
+cal_val=6/point_dist; %Image calibration  (cm/pixel)
+
+%% Image Cropping
+
+center_l=514;                       %axis of symetry
+Lcrop= 420;                       % left edge of the Burner
+Rcrop= 1024+Lcrop-2*center_l;                       % right edge of the Burner
+Tcrop= 400;                       % location for cropping of the top of the image
+Bcrop= 1024-921;                       % location for cropping of the bottom of the image
+
+%% Background images
+
+for f=1:length(bg_path) %finding backgound info for both Re
+    info_b=imfinfo(bg_path{f}); %info of image
+    for i=1:numframes %calculating the background average
+        if i==1
+            im_avg_b=double(imread(bg_path{f},1,'Info',info_b,'PixelRegion',...
+            {[Tcrop,1024-Bcrop],[Lcrop,1024-Rcrop]}));
+        else
+            image_i=double(imread(bg_path{f},i,'Info',info_b,'PixelRegion',...
+            {[Tcrop,1024-Bcrop],[Lcrop,1024-Rcrop]}));
+            im_avg_b=((i-1).*im_avg_b+image_i)./i;
+        end
+    end
+    b_avg(:,:,f)=im_avg_b; %This has both Re values in it.
+end
+
+%% Building Meshgrid 
+
+siz=size(im_avg_b); %Used to greate mesh grid
+x=0:(siz(2)-1); 
+x=cal_val*x; %Calibrated x distance
+y=0:(siz(1)-1); 
+y=cal_val*y; %Calibrated y distance
+y=fliplr(y);
+
+[X,Y]=meshgrid(x,y);
+%Y=flipud(Y);
+
+%% Calculating averages and plotting images
+
+
+count=1;
+for f=1:length(fg_path) %Plotting all files
+    info_f=imfinfo(fg_path{f}); %info of image
+
+
+    for i=1:numframes %calculating the image average
+        if i==1
+            image_0=double(imread(fg_path{f},1,'Info',info_f,'PixelRegion',...
+            {[Tcrop,1024-Bcrop],[Lcrop,1024-Rcrop]}));
+            im_avg_f=image_0;
+        else
+            image_i=double(imread(fg_path{f},i,'Info',info_f,'PixelRegion',...
+            {[Tcrop,1024-Bcrop],[Lcrop,1024-Rcrop]}));
+            im_avg_f=((i-1).*im_avg_f+image_i)./i;
+        end
+    end
+    
+    f_avg(:,:,f)=im_avg_f; %Image average per test. This has both Re values in it.
+    
+    if f<6.5 %The following is calculating the flame minus the background
+        flame_avg(:,:,f)=f_avg(:,:,f)-b_avg(:,:,1);
+    else
+        flame_avg(:,:,f)=f_avg(:,:,f)-b_avg(:,:,2);
+    end
+    
+%    max_int=max(max(flame_avg(:,:,f))); %finding maxinum intensity for per test
+    flame_avg(:,:,f)=medfilt2(flame_avg(:,:,f)); %filters
+    flame(:,:,f)=0.5*(flame_avg(:,1:end,f) + flame_avg(:, end+1-(1:end), f));   
+    % Axis symetric
+
+    
+    if rem(f,3)==0 %This is to find the average with all three tests
+        avg_flame(:,:,count)=mean(flame(:,:,f-2:f),3);
+        if f<3.5 %Plotting average to compare to snap-shots
+            figure(1)
+            subplot(1,7,1)
+            surf(X,Y,avg_flame(:,:,count),'EdgeColor','None'); axis image
+            view(2)
+            xlim([0,max(x)])
+            ylim([0,max(y)])
+            xlabel('X-Distance (cm)')
+            ylabel('Y-Distance (cm)')
+        elseif f<6.5
+            figure(2)
+                        
+            subplot(1,7,1)
+            surf(X,Y,avg_flame(:,:,count),'EdgeColor','None'); axis image
+            view(2)
+            grid off
+            xlim([0,max(x)])
+            ylim([0,max(y)])
+            xlabel('X-Distance (cm)')
+            ylabel('Y-Distance (cm)')
+        elseif f<9.5
+            figure(3)
+                
+            subplot(1,7,1)
+            surf(X,Y,avg_flame(:,:,count),'EdgeColor','None'); axis image
+            view(2)
+            grid off
+            xlim([0,max(x)])
+            ylim([0,max(y)])
+            xlabel('X-Distance (cm)')
+            ylabel('Y-Distance (cm)')
+        else
+            figure(4)
+                       
+            subplot(1,7,1)
+            surf(X,Y,avg_flame(:,:,count),'EdgeColor','None'); axis image
+            view(2)
+            grid off
+            xlim([0,max(x)])
+            ylim([0,max(y)])
+            xlabel('X-Distance (cm)')
+            ylabel('Y-Distance (cm)')
+        end
+        count=count+1;
+    end
+    
+    title_loc=4; %Location of center of title over which sub plot
+    
+    if f<3.5 %The following if statement plots the 6 snap-shots
+        figure(1)
+        a=f;
+        subplot(1,7,a+1)
+        surf(X,Y,image_0,'EdgeColor','None'); axis image %one snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+        
+        subplot(1,7,a+4)
+        surf(X,Y,image_i,'EdgeColor','None'); axis image %The other snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+    
+    elseif f<6.5
+        figure(2)
+        
+        a=f-3;
+        subplot(1,7,a+1)
+        surf(X,Y,image_0,'EdgeColor','None'); axis image %one snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+        
+        subplot(1,7,a+4)
+        surf(X,Y,image_i,'EdgeColor','None'); axis image %The other snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+
+    elseif f<9.5
+        figure(3)
+
+        a=f-6;
+        subplot(1,7,a+1)
+        surf(X,Y,image_0,'EdgeColor','None'); axis image %one snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+        
+        subplot(1,7,a+4)
+        surf(X,Y,image_i,'EdgeColor','None'); axis image %The other snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+
+    else
+        figure(4)
+       
+        a=f-9;
+        subplot(1,7,a+1)
+        surf(X,Y,image_0,'EdgeColor','None'); axis image %one snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+        
+        subplot(1,7,a+4)
+        surf(X,Y,image_i,'EdgeColor','None'); axis image %The other snap shot per test
+        view(2)
+        xlim([0,max(x)])
+        ylim([0,max(y)])
+        xlabel('X-Distance (cm)')
+        %ylabel('Y-Distance (cm)')
+
+    end
+    
+end
+
+figure(1)
+suptitle('Axis Symetric Corrected Flame (Re=5,000, High Turbulence Intensity)')
+
+figure(2)
+suptitle('Axis Symetric Corrected Flame (Re=5,000, Low Turbulence Intensity)')
+
+figure(3)
+suptitle('Axis Symetric Corrected Flame (Re=10,000, High Turbulence Intensity)')
+
+figure(4)
+suptitle('Axis Symetric Corrected Flame (Re=10,000, Low Turbulence Intensity)')
+
+
+%% Finding flame area
+center=(siz(2)+1)/2; %center index
+%figure(11)
+%plot(y,movmean(avg_flame(:,center,2),20))
+%plot(h,max1h)
+
+
+for i=1:4
+    flamepixels(i) = 0;
+    xpixelcount = length(avg_flame(:,1,i));
+    ypixelcount = length(avg_flame(1,:,i));
+    for j = 1:xpixelcount
+        for k = 1:ypixelcount
+            if avg_flame(j,k,i) > 24
+                flamepixels(i) = flamepixels(i) + 1;
+            end
+        end
+    end
+    flame_A(i) = flamepixels(i) * cal_val^2;
+end
+
+flame_A
+
+end
+\end{verbatim}
+\endgroup
+
+
 \end{appendices}
 \end{document}

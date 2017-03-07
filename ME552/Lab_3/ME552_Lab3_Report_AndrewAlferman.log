@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 MAR 2017 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 MAR 2017 22:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,61 +441,15 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsavesec=\count104
 \c@@ppsaveapp=\count105
 )
-
-Class scrartcl Warning: Usage of package `titlesec' together
-(scrartcl)              with a KOMA-Script class is not recommended.
-(scrartcl)              I'd suggest to use the package only
-(scrartcl)              if you really need it, because it breaks several
-(scrartcl)              KOMA-Script features, i.e., option `headings' and
-(scrartcl)              the extended optional argument of the section
-(scrartcl)              commands.
-(scrartcl)              Nevertheless, using requested
-(scrartcl)              package `titlesec' on input line 31.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box30
-\beforetitleunit=\skip61
-\aftertitleunit=\skip62
-\ttl@plus=\dimen122
-\ttl@minus=\dimen123
-\ttl@toksa=\toks26
-\titlewidth=\dimen124
-\titlewidthlast=\dimen125
-\titlewidthfirst=\dimen126
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-
-Package titlesec Warning: Non standard sectioning command detected
-(titlesec)                Using default spacing and no format.
-
-)
-
-Package scrartcl Warning: Activating an ugly workaround for a missing
-(scrartcl)                feature of package `titlesec` on input line 31.
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box31
-\fn@width=\dimen127
+\fn@notes=\box30
+\fn@width=\dimen122
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen128
+(/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count106
+\cp@tempcnt=\count107
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
@@ -507,83 +461,85 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              I'd suggest to use 
 (scrartcl)              package `scrlayer-scrpage'.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 39.
+(scrartcl)              package `fancyhdr' on input line 90.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip63
-\f@ncyO@elh=\skip64
-\f@ncyO@erh=\skip65
-\f@ncyO@olh=\skip66
-\f@ncyO@orh=\skip67
-\f@ncyO@elf=\skip68
-\f@ncyO@erf=\skip69
-\f@ncyO@olf=\skip70
-\f@ncyO@orf=\skip71
+\fancy@headwidth=\skip61
+\f@ncyO@elh=\skip62
+\f@ncyO@erh=\skip63
+\f@ncyO@olh=\skip64
+\f@ncyO@orh=\skip65
+\f@ncyO@elf=\skip66
+\f@ncyO@erf=\skip67
+\f@ncyO@olf=\skip68
+\f@ncyO@orf=\skip69
 )
 (./ME552_Lab3_Report_AndrewAlferman.aux)
 \openout1 = `ME552_Lab3_Report_AndrewAlferman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 72.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 72.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 119.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 119
+.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 72.
-
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 119.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 119
+.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 72.
-
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 119.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 119
+.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 72.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 119.
+
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 72.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 119.
+
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen129
-\scratchbox=\box32
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen130
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count108
+\scratchdimen=\dimen123
+\scratchbox=\box31
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen124
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -633,36 +589,36 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 100.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 137.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 10
-0.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 13
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 100.
+(Font)              scaled to size 13.24796pt on input line 137.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 100.
+(Font)              scaled to size 9.19998pt on input line 137.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 100.
+(Font)              scaled to size 7.35999pt on input line 137.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 100.
+(Font)              scaled to size 13.24796pt on input line 137.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 100.
+(Font)              scaled to size 9.19998pt on input line 137.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 100.
-LaTeX Font Info:    Try loading font information for U+msa on input line 100.
+(Font)              scaled to size 7.35999pt on input line 137.
+LaTeX Font Info:    Try loading font information for U+msa on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 100.
+LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -671,56 +627,143 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 173.
+(Font)              scaled to size 6.99199pt on input line 163.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 173.
+(Font)              scaled to size 5.51999pt on input line 163.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 173.
+(Font)              scaled to size 6.99199pt on input line 163.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 173.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 177.
+(Font)              scaled to size 5.51999pt on input line 163.
+ [3]
+Overfull \hbox (4.475pt too wide) in paragraph at lines 204--205
+[]\T1/futs/m/n/10 As can be seen, the ap-par-ent cross sec-tional area in-creas
+ed greatly by in-creas-ing the Reynolds
+ []
 
+[4] (./ME552_Lab3_Report_AndrewAlferman.bbl
 
-LaTeX Warning: Reference `tab:orif' on page 3 undefined on input line 177.
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 1.
 
+) [5] <Re5kHigh.pdf, id=21, 475.25133pt x 172.7224pt>
+File: Re5kHigh.pdf Graphic file (type pdf)
+ <use Re5kHigh.pdf>
+Package pdftex.def Info: Re5kHigh.pdf used on input line 225.
+(pdftex.def)             Requested size: 364.7365pt x 132.55652pt.
+
+<Re5kLow.pdf, id=22, 477.4166pt x 167.11404pt>
+File: Re5kLow.pdf Graphic file (type pdf)
+ <use Re5kLow.pdf>
+Package pdftex.def Info: Re5kLow.pdf used on input line 232.
+(pdftex.def)             Requested size: 364.7365pt x 127.67352pt.
+
+<Re10kHigh.pdf, id=23, 475.1318pt x 172.66147pt>
+File: Re10kHigh.pdf Graphic file (type pdf)
+ <use Re10kHigh.pdf>
+Package pdftex.def Info: Re10kHigh.pdf used on input line 239.
+(pdftex.def)             Requested size: 364.7365pt x 132.54399pt.
+
+<Re10kLow.pdf, id=24, 475.20125pt x 167.51674pt>
+File: Re10kLow.pdf Graphic file (type pdf)
+ <use Re10kLow.pdf>
+Package pdftex.def Info: Re10kLow.pdf used on input line 246.
+(pdftex.def)             Requested size: 364.7365pt x 128.5793pt.
+ [6
+
+ <./Re5kHigh.pdf> <./Re5kLow.pdf>] [7 <./Re10kHigh.pdf> <./Re10kLow.pdf>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 185.
+(Font)              scaled to size 6.25598pt on input line 273.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 185.
+(Font)              scaled to size 6.25598pt on input line 273.
+ [8
 
-Overfull \hbox (4.86499pt too wide) in paragraph at lines 173--196
- [] 
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 331.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (8.14485pt too wide) in paragraph at lines 622--622
+[]\T1/cmtt/m/n/9 Datapath = '/scratch';                           %Adds Data pa
+th as callable string[] 
  []
 
 
-Overfull \hbox (92.90486pt too wide) in paragraph at lines 202--210
- [] 
+Overfull \hbox (22.31639pt too wide) in paragraph at lines 622--622
+[]\T1/cmtt/m/n/9 m_dot_total =0.001215;               %Total mass flow (kg/s) o
+f reactants for Re=5,000[] 
  []
 
-[3
 
-] (./ME552_Lab3_Report_AndrewAlferman.aux)
+Overfull \hbox (27.04024pt too wide) in paragraph at lines 622--622
+[]\T1/cmtt/m/n/9 %m_dot_total=.00243;                 %Total mass flow (kg/s) o
+f reactants for Re=10,000[] 
+ []
 
-LaTeX Warning: There were undefined references.
+[9
 
- ) 
+]
+Overfull \hbox (36.48793pt too wide) in paragraph at lines 622--622
+[]\T1/cmtt/m/n/9 Bcrop= 1024-921;                       % location for cropping
+ of the bottom of the image[] 
+ []
+
+[10]
+Overfull \hbox (3.421pt too wide) in paragraph at lines 622--622
+[]    \T1/cmtt/m/n/9 f_avg(:,:,f)=im_avg_f; %Image average per test. This has b
+oth Re values in it.[] 
+ []
+
+[11] [12]
+Overfull \hbox (22.31639pt too wide) in paragraph at lines 622--622
+[]        \T1/cmtt/m/n/9 surf(X,Y,image_i,'EdgeColor','None'); axis image %The 
+other snap shot per test[] 
+ []
+
+
+Overfull \hbox (22.31639pt too wide) in paragraph at lines 622--622
+[]        \T1/cmtt/m/n/9 surf(X,Y,image_i,'EdgeColor','None'); axis image %The 
+other snap shot per test[] 
+ []
+
+[13]
+Overfull \hbox (22.31639pt too wide) in paragraph at lines 622--622
+[]        \T1/cmtt/m/n/9 surf(X,Y,image_i,'EdgeColor','None'); axis image %The 
+other snap shot per test[] 
+ []
+
+
+Overfull \hbox (22.31639pt too wide) in paragraph at lines 622--622
+[]        \T1/cmtt/m/n/9 surf(X,Y,image_i,'EdgeColor','None'); axis image %The 
+other snap shot per test[] 
+ []
+
+[14] [15] (./ME552_Lab3_Report_AndrewAlferman.aux) ) 
 Here is how much of TeX's memory you used:
- 7208 strings out of 493014
- 114741 string characters out of 6133351
- 262240 words of memory out of 5000000
- 10599 multiletter control sequences out of 15000+600000
- 92705 words of font info for 99 fonts, out of 8000000 for 9000
+ 7059 strings out of 493014
+ 113383 string characters out of 6133351
+ 260104 words of memory out of 5000000
+ 10439 multiletter control sequences out of 15000+600000
+ 98203 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,15n,51p,8511b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on ME552_Lab3_Report_AndrewAlferman.pdf (3 pages, 35215 bytes).
+ 47i,15n,51p,8511b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2016/texm
+f-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/fourier/fourier-ms.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/adobe/utopia/putr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/adob
+e/utopia/putri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-
+super/sftt0900.pfb>
+Output written on ME552_Lab3_Report_AndrewAlferman.pdf (15 pages, 8633718 bytes
+).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 381 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
