@@ -67,7 +67,7 @@ fuelmass = 0.040 # Measured value
 potmeasurement = 0.099 # Measured value
 watermassmeasurement = 0.246 # Measured value
 
-hotwatermass = 0.226
+hotwatermass = 0.122
 
 mcan0 = unc.ufloat(canmass, scale1)
 mcan1 = unc.ufloat(fuelmass, scale1) # Measured value
@@ -75,12 +75,11 @@ methanol = unc.ufloat(0.95, scale1) # Assuming 100% concentration
 mdiluent = unc.ufloat(0.00, scale1) # Assuming 100% concentration
 mpot0 = unc.ufloat(potmeasurement, scale1)
 mpot1 = unc.ufloat(watermassmeasurement + potmeasurement, scale1)
-mpot2 = unc.ufloat(hotwatermass, scale1) # Assuming we lose 5g of water due to boiling
+mpot2 = unc.ufloat(hotwatermass + potmeasurement, scale1) # Assuming we lose 5g of water due to boiling
 
 # Add in the pressure measurements of the sampling tube
 # Will be input and output in inches of water
-deltaP = unc.ufloat(0.46, press) # Measured value during calbibration
-deltaPpitot = unc.ufloat(0.498, press) # Measured value during calbibration
+deltaP = unc.ufloat(0.445, press) # Measured value during calbibration
 
 # Absolute pressure in Pascals
 Pabsolute = unc.ufloat(1018, barometer) * mbartopa # Measured value
@@ -90,20 +89,16 @@ COppm = unc.ufloat(10., CO)
 CO2ppm = unc.ufloat(200., CO2)
 
 # Add in burn time, in seconds
-burntime = unc.ufloat(15.*60., stopwatch) # Assuming that it will burn 15 min
+burntime = unc.ufloat(15.*60., stopwatch) # NEED TO GET
 
 # Add in the temperature measurements
 # Input and output in Kelvin
-T0 = unc.ufloat(295.98, thermocouples) # Measured value during calibration
+T0 = unc.ufloat(295.98, thermocouples) # NEED TO GET
 Tambient = unc.ufloat(297.2, thermometer) # Measured value
-TE = unc.ufloat(373.15, thermocouples) # Assuming boiling point at sea level
-
-# Inner diameter of sampling tube
-d = unc.ufloat(98.625, caliper) * mmtom # ID of sampling tube in meters
+TE = unc.ufloat(373.15, thermocouples) # NEED TO GET
 
 # Plug in each of the equations and solve.  The bottom of the tree is computed
 # first in order to allow computation of the higher level tolerances.
-A = 0.25 * np.pi * d**2
 rho_air = Pabsolute / (R_air * Tambient)
 mwater1 = mpot1 - mpot0
 mwater2 = mpot2 - mpot0
@@ -114,9 +109,9 @@ Ux = Uethanol * Cx
 Ereleased = mfuel * Ux
 EH2Oevap = mevap * hv
 deltaT = TE - T0
-vpitot = ((2*(deltaPpitot*inwtopa))/rho_air)**0.5
 Vdottube = (215.*(deltaP**0.5)) * cfmtocms
-C = (vpitot * A) / Vdottube
+C = unc.ufloat(1.5998468653396583, 0.02159726001744998) # Value found during
+                                                        # calibration
 Vdot = Vdottube * C
 V = Vdot * burntime
 COpartial = Pabsolute * COppm / 1.e6
