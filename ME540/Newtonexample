@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  7 11:08:08 2017
+
+@author: andrewalferman
+"""
+
+def newtonsmethod(function, derivativefunction, guess, tolerance):
+    x = guess
+    count = 0
+    while True:
+        x1 = x - (function(x)/derivativefunction(x))
+        if abs(x1 - x) < tolerance:
+            break
+        x = x1
+        count += 1
+    return x, count
+
+
+def function(x):
+    return x**2. - 2.
+
+
+def derivativefunction(x):
+    return 2*x
+
+tolerance = 1.e-15
+val, num = newtonsmethod(function, derivativefunction, 1, tolerance)
+print('Square root of 2: {}'.format(val))
+print('Newton iterations needed: {}'.format(num))
