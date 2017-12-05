@@ -5,7 +5,12 @@ clear all
 close all
 
 % Number of species represented by Gaussian distributions
-NSP = 13;
+NSP = 8;
+
+% Integration time parameters
+t_start = 0.0;
+t_end = 2.0;
+dt = 0.001; % Note that the problem will be extremely stiff at larger dt
 
 % %% Get KL expansion that retains 99% of variance
 % [t, MeanK, lambda, phi, myNKL]=KLinflow(.99);
@@ -35,24 +40,24 @@ pause(0.1)
 %% Perform Discrete Projection:
 
 % we will want simulations upto 2*T
-tt=[t(1):t(2)-t(1):2*t(end)];
+tt=[t_start:dt:t_end];
 
 
 %% Apply Sparse Grid:
 tic
 MaxQs=0;
 MaxTs=0;
-figure(6);clf;
-figure(7);clf;
+% figure(6);clf;
+% figure(7);clf;
 for i=1:size(xs,2)
   
    % Build Qin by evaluating KL at collocation point xs(:,i)
-   Qin=MeanK;
+   %Qin=MeanK;
 
-   for j=1:myNKL
-       Qin=Qin+sqrt(3)*xs(j,i)*sqrt(lambda(j))*phi(:,j);
-   end
-   figure(6);plot(t,Qin);hold on
+   %for j=1:myNKL
+   %    Qin=Qin+sqrt(3)*xs(j,i)*sqrt(lambda(j))*phi(:,j);
+   %end
+   %figure(6);plot(t,Qin);hold on
    
    % Simulate system at collocation point
    figure(7)

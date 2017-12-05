@@ -8,7 +8,7 @@
 %% Find Stochastic Collocation nodes (assuming uniform [-sqrt(3),sqrt(3)])
 
 % Choose Clenshaw-Curtis 1D level:
-level=1;
+level=2;
 
 % Full Tensor Clenshaw-Curtis:
 [xf,wf]=cc_grid_dataset(myNKL,2^(level-1)+1); % defined by number of points per dimension
