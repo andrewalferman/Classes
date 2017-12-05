@@ -24,13 +24,13 @@ point_num = sparse_grid_herm_size(NSP, level);
 [xw, xs] = sparse_grid_herm(NSP, level, point_num);
 
 % plot first two dimensions of grid:
-% figure(3); clf;
+figure(3); clf;
 % plot(xf(1,:),xf(2,:),'o')
 % hold on
-% plot(xs(1,:),xs(2,:),'o','MarkerFaceColor','blue')
-% legend('Full','Sparse')
-% title(['Clenshaw-Curtis grids, L= ', num2str(level)])
-% pause(0.1)
+plot(xs(1,:),xs(2,:),'o','MarkerFaceColor','blue')
+legend('Sparse')
+title(['Clenshaw-Curtis grids, L= ', num2str(level)])
+pause(0.1)
 
 %% Perform Discrete Projection:
 
